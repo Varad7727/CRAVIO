@@ -1,0 +1,12 @@
+// start server
+
+require("dotenv").config({ path: "../.env" });
+
+const app = require("./src/app");
+const connectToDB = require("./db/db");
+
+connectToDB();
+
+app.listen(3000, () => {
+    console.log("server running on port 3000");
+});
